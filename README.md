@@ -10,7 +10,7 @@
 
 Структура проекта:
 
-finalproject\_<фамилия>\_<группа>/
+finalproject\_<Kolosov>\_<M25-555>/
 
 │  
 
