@@ -6,11 +6,95 @@
 
 Запуск проекта осуществляется через Poetry после установки зависимостей. Приложение предназначено для демонстрации навыков работы с Python, структурирования кода, обработки данных и использования внешних сервисов.
 
+
+
+Структура проекта:
+
+finalproject\_<фамилия>\_<группа>/
+
+│  
+
+├── data/
+
+│    ├── users.json          
+
+│    ├── portfolios.json       
+
+│    ├── rates.json               # локальный кэш для Core Service
+
+│    └── exchange\_rates.json      # хранилище Parser Service (исторические данные).json            
+
+├── valutatrade\_hub/
+
+│    ├── \_\_init\_\_.py
+
+│    ├── logging\_config.py         
+
+│    ├── decorators.py            
+
+│    ├── core/
+
+│    │    ├── \_\_init\_\_.py
+
+│    │    ├── currencies.py         
+
+│    │    ├── exceptions.py         
+
+│    │    ├── models.py           
+
+│    │    ├── usecases.py          
+
+│    │    └── utils.py             
+
+│    ├── infra/
+
+│    │    ├─ \_\_init\_\_.py
+
+│    │    ├── settings.py           
+
+│    │    └── database.py          
+
+│    ├── parser\_service/
+
+│    │    ├── \_\_init\_\_.py
+
+│    │    ├── config.py             # конфигурация API и параметров обновления
+
+│    │    ├── api\_clients.py        # работа с внешними API
+
+│    │    ├── updater.py            # основной модуль обновления курсов
+
+│    │    ├── storage.py            # операции чтения/записи exchange\_rates.json
+
+│    │    └── scheduler.py          # планировщик периодического обновления
+
+│    └── cli/
+
+│         ├─ \_\_init\_\_.py
+
+│         └─ interface.py     
+
+│
+
+├── main.py
+
+├── Makefile
+
+├── poetry.lock
+
+├── pyproject.toml
+
+├── README.md
+
+└── .gitignore               
+
+
+
 Автор: Колосов Евгений Дмитриевич, группа М25-555.
 
 
 
-\## Демонстрация видео 
+\## Демонстрация видео
 
 https://asciinema.org/a/cySxJbZUQpwjhRGK
 
